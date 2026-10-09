@@ -1,0 +1,9 @@
+# Structured Reflection (draft to personalise after testing)
+
+I used ChatGPT to help me understand the assignment requirements, set up Ubuntu in WSL, and prepare a starting implementation in C. The assistance was useful for breaking a large assignment into smaller steps and identifying the personalised values required by the specification, including the TCP port, session ID, authentication token, source filenames, log filename, and storage directory.
+
+The generated code provides a starting point for learning about TCP sockets, thread-based concurrency, authentication, file transfer, a restricted command whitelist, and UDP monitoring. However, AI-generated code can contain errors and assumptions. For example, system commands and process information may behave differently across Linux environments, and the framing rules for text and raw file bytes require careful testing. I should not assume that a feature works simply because code has been written for it.
+
+I need to compile the program, run the Agent and Controller in separate terminals, and test each mandatory command. I will compare the actual output with the assignment protocol and fix any errors I find. I will also capture genuine screenshots of my own tests and update this reflection to describe the changes I actually made. I will not claim a test passed unless I have observed it.
+
+Through this process, I am learning how a client and server communicate through TCP sockets, why a server needs to handle multiple clients, and how UDP can be used for periodic monitoring without creating a separate TCP connection for every update. I also need to understand how the code reads lines, transfers an exact number of bytes, checks authentication, and rejects commands outside the fixed whitelist. This work has shown me that using AI can speed up a first draft, but I remain responsible for verifying, understanding, and being able to explain my own submission.
